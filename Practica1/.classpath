@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/media/alexurve/Alex_Gran/UNI/IA/Lab/Practica1/LAB/lab1/Azamon/Azamon.jar"/>
+	<classpathentry kind="lib" path="/media/alexurve/Alex_Gran/UNI/IA/Lab/Practica1/practicas_ejemple(binarios de las clases compiladas de los algoritmos de busqueda/AIMA.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
