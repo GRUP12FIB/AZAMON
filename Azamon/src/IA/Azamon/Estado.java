@@ -16,12 +16,8 @@ public class Estado {
 	public void Estado() {
 		
 	}
-	
-	
-	
-	
-	
-	
+
+
 	public int getFelicitat() {
 		return felicitat;
 	}
@@ -47,7 +43,20 @@ public class Estado {
 	public double getPesOferta(int x) {
 		return pes_oferta.get(x);
 	}
-	
+
+	public Estado(int npaq,int seed, double proporcio ) {
+		p = new Paquetes(npaq,seed);
+		t = new Transporte(p, proporcio, seed);
+		felicitat = 0;
+		preu_envio = 0;
+		preu_emmagatzemar = 0;
+		assig = new ArrayList<Integer>(npaq);
+		for(int i = 0; i < npaq; ++i) {
+			assig.add(-1);
+		}
+		pes_oferta = new ArrayList<Double>(t.size());
+		for(int i = 0; i < t.size(); ++i) {
+			pes_oferta.add(0.0);
+		}
+	}
 }
-	
-		
