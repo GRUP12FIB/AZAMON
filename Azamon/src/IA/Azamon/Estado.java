@@ -11,7 +11,43 @@ public class Estado {
 	
 	private ArrayList<Integer> assig; // relaci� entre paquets i ofertes -> per assig[i] la i correspon al identificador del p
 									  //paquet i la assig[i] es la oferta -> si la assig[i] = -1 significa que el paquet no esta assignat a cap oferta
-	private ArrayList<Double> pes_oferta; // pes actual que te la oferta -> la i es la oferta i pes_oferta[i] es el pes d'aquesta oferta
+	private ArrayList<Double> pes_oferta;  // pes actual que te la oferta -> la i es la oferta i pes_oferta[i] es el pes d'aquesta oferta
+
+	public void Estado() {
+		
+	}
 	
+	
+	
+	
+	
+	
+	public int getFelicitat() {
+		return felicitat;
+	}
+	
+	public double getPreuEnvio() {
+		return preu_envio;
+	}
+	public double getPreuMagatzem() {
+		return preu_emmagatzemar;
+	}
+	public double getPreuTotal() {
+		return (preu_envio + preu_emmagatzemar);
+	}
+	
+	public int getOfertaPaq(int x) {
+		return assig.get(x);
+	}
+	
+	public double getPes(int paq) {
+		return p.get(paq).getPeso();
+	}
+	
+	public double getPesOferta(int x) {
+		return pes_oferta.get(x);
+	}
 	
 }
+	
+		
