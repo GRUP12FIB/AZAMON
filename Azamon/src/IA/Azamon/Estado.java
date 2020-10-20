@@ -3,8 +3,8 @@ package IA.Azamon;
 import java.util.*;
 
 public class Estado {
-	private static Paquetes p; // vector de paquets ( posem static perque tots els estats tindran el mateix vector p)
-	private static Transporte t; // vector de ofertes ( posem static perque tots els estats tindran el mateix vector t)
+	static Paquetes p; // vector de paquets ( posem static perque tots els estats tindran el mateix vector p)
+	static Transporte t; // vector de ofertes ( posem static perque tots els estats tindran el mateix vector t)
 	private double preu_envio;// total del que costaran els envios
 	private double preu_emmagatzemar; // total que costara el emmagatzematge
 	private int felicitat; //felicitat del estat
@@ -19,8 +19,17 @@ public class Estado {
 	
 	
 	
-	
-	
+	public void Estado(Estado est) { //Clonadora
+		p = est.p;
+		t = est.t;
+		preu_envio = est.getPreuEnvio();
+		preu_emmagatzemar = est.getPreuMagatzem();
+		felicitat = est.getFelicitat();
+		
+		 assig = new ArrayList<Integer>(est.assig);
+		 pes_oferta= new ArrayList<Double>(est.pes_oferta);
+		
+	} 
 	
 	public int getFelicitat() {
 		return felicitat;
