@@ -18,6 +18,23 @@ public class Estado {
 	}
 	
 	
+
+	public Estado(int npaq,int seed, double proporcio ) { //Constructora
+		p = new Paquetes(npaq,seed);
+		t = new Transporte(p, proporcio, seed);
+		felicitat = 0;
+		preu_envio = 0;
+		preu_emmagatzemar = 0;
+		assig = new ArrayList<Integer>(npaq);
+		for(int i = 0; i < npaq; ++i) {
+			assig.add(-1);
+		}
+		pes_oferta = new ArrayList<Double>(t.size());
+		for(int i = 0; i < t.size(); ++i) {
+			pes_oferta.add(0.0);
+		}
+	} 
+	
 	
 	public void Estado(Estado est) { //Clonadora
 		p = est.p;
